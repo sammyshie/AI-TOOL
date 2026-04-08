@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡報式網頁</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</head>
+<body class="font-medium">
+  <header class="site-header">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <div class="header-content" style="white-space: nowrap; margin-right: 20px;">
+      <h1 class="site-title" style="display: inline-block;">AI常用範疇與工具 &nbsp;&nbsp;<span style="font-size: 0.6em; font-weight: normal;">今周刊 2026.03.12</span></h1>
+    </div>
+    <div class="header-search">
+      <label for="searchInput" style="margin-right:8px; font-weight:bold;">查詢：</label>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="輸入關鍵字尋找...">
+        <button id="searchNextBtn" title="尋找下一個" class="search-icon-btn">🔍</button>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="fullscreenBtn" title="全螢幕切換">⛶ 全螢幕</button>
+    </div>
+  </header>
+
+  <div class="main-layout">
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">目錄</div>
+      <ul class="nav-list" id="navList"></ul>
+      <div class="sidebar-footer">
+        <button class="settings-btn" id="settingsBtn">⚙️ 字體設定</button>
+      </div>
+    </nav>
+    <div class="sidebar-resizer" id="resizer"></div>
+    <div class="settings-panel" id="settingsPanel" style="display:none;">
+      <h3 style="margin-top:0; font-size:16px;">選擇文字大小</h3>
+      <button class="font-size-btn" data-size="medium">適中</button>
+      <button class="font-size-btn" data-size="large">大</button>
+      <button class="font-size-btn" data-size="xlarge">特大</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <main class="content" id="contentArea">
+      <div id="quickNav" class="quick-nav"></div>
+      <div class="content-inner" id="contentInner">
+        <p>載入中...</p>
+      </div>
+    </main>
+    <button id="backToTopBtn" class="back-to-top" title="返回頁首">▲</button>
+  </div>
+  
+  <footer class="site-footer">
+    <div class="footer-license">Powered by AI Generator</div>
+  </footer>
+
+  <!-- 載入編譯好的資料與邏輯 -->
+  <script src="data/units.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
